@@ -37,7 +37,7 @@
                                 <td>{{ $item->year }}</td>
                                 <td>{{ $item->major }}</td>
                                 <td><a href="{{route('edit',['id' => $item->idstudent])}}" class="btn btn-warning">แก้ไข</a>
-                                <a href="{{route('delete',['id' => $item->idstudent])}}" class="btn btn-danger" onclick="">ลบ</a></td>
+                                <a href="{{route('delete',['id' => $item->idstudent])}}" class="btn btn-danger" onclick="return confirm('คุณต้องการลบ {{ $item->pname}}{{ $item->fname}}&nbsp;&nbsp;{{ $item->lname}} หรือไม่?')">ลบ</a></td>
                                 {{-- <td>{{ $item['major'] }}</td> --}}
                             </tr>
                         @endforeach
