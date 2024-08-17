@@ -37,7 +37,7 @@
                                 <td>{{ $item->year }}</td>
                                 <td>{{ $item->major }}</td>
                                 <td><a href="{{route('edit',['id' => $item->idstudent])}}" class="btn btn-warning">แก้ไข</a>
-                                <a href="{{route('delete',['id' => $item->idstudent])}}" class="btn btn-danger">ลบ</a></td>
+                                <a href="{{route('delete',['id' => $item->idstudent])}}" class="btn btn-danger" onclick="">ลบ</a></td>
                                 {{-- <td>{{ $item['major'] }}</td> --}}
                             </tr>
                         @endforeach
@@ -49,6 +49,7 @@
 
                 </tbody>
             </table>
+            {{$all_student->links('pagination::bootstrap-5')}}
         </div>
     </div>
 @endsection

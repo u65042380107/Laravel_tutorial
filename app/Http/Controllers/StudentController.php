@@ -18,7 +18,7 @@ class StudentController extends Controller
     // }
 
     public function index(){
-        $all_student = Student::all();
+        $all_student = Student::paginate(5); //all();
         return view('home',compact('all_student'));
     }
 
