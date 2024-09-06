@@ -20,4 +20,6 @@ class Student extends Model
         'year',
         'major',
     ];
+
+    //protected $table = "student"; กรณีทำแยกกัน
 }
