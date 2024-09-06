@@ -1,4 +1,4 @@
-@extends('Layouts.app')
+@extends('layouts.app1')
 
 @section('title')
     หน้าหลัก
@@ -36,8 +36,15 @@
                                 <td>{{ $item->pname}}{{ $item->fname}}&nbsp;&nbsp;{{ $item->lname}}</td>
                                 <td>{{ $item->year }}</td>
                                 <td>{{ $item->major }}</td>
-                                <td><a href="{{route('edit',['id' => $item->idstudent])}}" class="btn btn-warning">แก้ไข</a>
-                                <a href="{{route('delete',['id' => $item->idstudent])}}" class="btn btn-danger" onclick="return confirm('คุณต้องการลบ {{ $item->pname}}{{ $item->fname}}&nbsp;&nbsp;{{ $item->lname}} หรือไม่?')">ลบ</a></td>
+                                <td>
+                                    <a href="{{ route('edit', ['id' => $item->idstudent]) }}" class="btn btn-warning">
+                                        <i class="fas fa-edit"></i> แก้ไข
+                                    </a>
+                                    <a href="{{ route('delete', ['id' => $item->idstudent]) }}" class="btn btn-danger" onclick="return confirm('คุณต้องการลบ {{ $item->pname }}{{ $item->fname }} {{ $item->lname }} หรือไม่?')">
+                                        <i class="fas fa-trash"></i> ลบ
+                                    </a>
+                                </td>
+                                
                                 {{-- <td>{{ $item['major'] }}</td> --}}
                             </tr>
                         @endforeach

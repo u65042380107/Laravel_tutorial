@@ -1,4 +1,4 @@
-@extends('Layouts.app')
+@extends('Layouts.app1')
 
 @section('title')
     เพิ่มข้อมูลนักศึกษา
